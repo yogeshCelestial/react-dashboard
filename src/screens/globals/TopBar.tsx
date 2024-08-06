@@ -7,7 +7,7 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { ColorModeContext, tokens } from '../../theme';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 
 function TopBar() {
     const theme = useTheme();
@@ -60,7 +60,7 @@ function TopBar() {
                 </IconButton>
             </Box>
         </Box>
-    )
-};
+    );
+}
 
 export default TopBar;
