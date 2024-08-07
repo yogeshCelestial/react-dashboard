@@ -1,14 +1,14 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { useMode, ColorModeContext, useThemeConstructor } from './theme';
+import { useMode, ColorModeContext } from './theme';
 import TopBar from './screens/globals/TopBar';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './screens/dashboard';
 import SideBar from './screens/globals/SideBar';
+import Team from './screens/team';
 
 function App() {
-    const colorMode = useMode();
-    const theme = useThemeConstructor();
+    const {theme, colorMode} = useMode();
  
     return (
         <ColorModeContext.Provider value={colorMode}>
@@ -20,7 +20,7 @@ function App() {
                         <TopBar />
                         <Routes>
                             <Route path='/' element={<Dashboard />} />
-                            {/* <Route path='/teams' element={<Dashboard />} /> */}
+                            <Route path='/team' element={<Team />} />
                             {/* <Route path='/contacts' element={<Dashboard />} /> */}
                             {/* <Route path='/invoices' element={<Dashboard />} /> */}
                             {/* <Route path='/calender' element={<Dashboard />} /> */}
