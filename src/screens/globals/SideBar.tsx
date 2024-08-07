@@ -12,7 +12,8 @@ import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlin
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarToday';
 import ReceiptOutlinedIcon from '@mui/icons-material/Receipt';
 import TimelineOutlinedIcon from '@mui/icons-material/Timeline';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import userPicture from '../../assets/user.svg';
 
 import { tokens } from '../../theme';
@@ -55,7 +56,7 @@ function SideBar() {
                     backgroundColor: 'transparent !important',
                 },
                 '& .pro-inner-item': {
-                    padding: '5px 35px 5px 20px !important'
+                    padding: '5px 20px 5px 20px !important'
                 },
                 '& .pro-inner-item:hover': {
                     color: '#868dfb !important',
@@ -65,8 +66,9 @@ function SideBar() {
                 },
             }}
         >
-            <ProSideBar>
-
+            <ProSideBar
+                collapsed={isCollapsed}
+            >
                 <Menu>
                     <MenuItem>
                         <Box
@@ -74,8 +76,26 @@ function SideBar() {
                             justifyContent='space-between'
                             alignItems='center'
                         >
-                            <Typography variant='h5' color={colors.grey[100]}>Admin</Typography>
-                            <IconButton type='button' onClick={() => setIsCollapsed(!isCollapsed)}><MenuOutlinedIcon /></IconButton>
+                            {!isCollapsed ? (
+                                <>
+                                    <Typography variant='h5' color={colors.grey[100]}>Admin</Typography>
+                                    <IconButton
+                                        type='button'
+                                        onClick={() => setIsCollapsed(!isCollapsed)}
+                                    >
+                                        <ArrowCircleLeftOutlinedIcon />
+                                    </IconButton>
+                                </>
+                            )
+                                : (
+                                    <IconButton
+                                        type='button'
+                                        onClick={() => setIsCollapsed(!isCollapsed)}
+                                    >
+                                        <ArrowCircleRightOutlinedIcon />
+                                    </IconButton>
+
+                                )}
                         </Box>
                     </MenuItem>
 
