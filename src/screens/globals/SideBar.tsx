@@ -132,8 +132,8 @@ function SideBar() {
                             Data
                         </Typography>
                         <Item
-                            title='Contacts'
-                            to='/contacts'
+                            title='Team'
+                            to='/team'
                             icon={<PeopleOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
