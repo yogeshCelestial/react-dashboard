@@ -69,16 +69,14 @@ function SideBar() {
 
                 <Menu>
                     <MenuItem>
-                        {!isCollapsed && (
-                            <Box
-                                display='flex'
-                                justifyContent='space-between'
-                                alignItems='center'
-                            >
-                                <Typography variant='h5' color={colors.grey[100]}>ADMIN</Typography>
-                                <IconButton type='button' onClick={() => setIsCollapsed(!isCollapsed)}><MenuOutlinedIcon /></IconButton>
-                            </Box>
-                        )}
+                        <Box
+                            display='flex'
+                            justifyContent='space-between'
+                            alignItems='center'
+                        >
+                            <Typography variant='h5' color={colors.grey[100]}>Admin</Typography>
+                            <IconButton type='button' onClick={() => setIsCollapsed(!isCollapsed)}><MenuOutlinedIcon /></IconButton>
+                        </Box>
                     </MenuItem>
 
                     {/* User */}
@@ -95,7 +93,7 @@ function SideBar() {
                                 />
                             </Box>
                             <Box textAlign='center'>
-                                <Typography variant='h3' color={colors.grey[100]} fontWeight='bold' sx={{ m: '10px 0 5px 5px' }}>Yogesh</Typography>
+                                <Typography variant='h3' color={colors.grey[100]} fontWeight='bold' sx={{ m: '10px 0 5px 5px' }}>YOGESH</Typography>
                                 <Typography variant='h6' color={colors.greenAccent[400]}>Frontend Developer</Typography>
                             </Box>
                         </Box>

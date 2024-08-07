@@ -1,13 +1,14 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { useMode, ColorModeContext } from './theme';
+import { useMode, ColorModeContext, useThemeConstructor } from './theme';
 import TopBar from './screens/globals/TopBar';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './screens/dashboard';
 import SideBar from './screens/globals/SideBar';
 
 function App() {
-    const [theme, colorMode] = useMode();
+    const colorMode = useMode();
+    const theme = useThemeConstructor();
  
     return (
         <ColorModeContext.Provider value={colorMode}>

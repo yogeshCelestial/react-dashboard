@@ -209,7 +209,7 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-    const [mode, setMode] = useState<PaletteMode>('dark');
+    const [ , setMode] = useState<PaletteMode>('dark');
 
     const colorMode = useMemo(
         () => ({
@@ -220,7 +220,11 @@ export const useMode = () => {
         []
     );
 
-    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+    return colorMode;
+};
 
-    return [theme, colorMode];
+export const useThemeConstructor = () => {
+    const [mode] = useState<PaletteMode>('dark');
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+    return theme;
 };
