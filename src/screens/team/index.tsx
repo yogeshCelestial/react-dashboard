@@ -28,12 +28,13 @@ const Team = () => {
                     p='5px'
                     display='flex'
                     justifyContent='center'
-                    sx={{ backgraoundColor: access === 'admin' ? `${colors.greenAccent[600]} !important` : `${colors.greenAccent[600]} !important`}}
+                    sx={{ backgroundColor: access === 'admin' ? `${colors.greenAccent[600]} !important` : `${colors.greenAccent[700]} !important`}}
                     borderRadius='5px'
                 >
                     {access === 'admin' && (<AdminPanelSettingsOutlinedIcon />)}
                     {access === 'manager' && (<ManageAccountsOutlinedIcon />)}
                     {access === 'user' && (<LockPersonOutlinedIcon />)}
+                    <Typography sx={{ ml: '5px'}}>{access}</Typography>
                 </Box>
             );
         }}
@@ -42,8 +43,29 @@ const Team = () => {
     return (
         <Box m='20px'>
             <Header title='TEAM' subtitle='Manage your Team Members' />
-            <Typography>Team</Typography>
-            <Box>
+            <Box m='40px 0 0 0' height='70vh' sx={{ 
+                '& .MuiDataGrid-root': {
+                    border: 'none',
+                },
+                '& .MuiDataGrid-cell': {
+                    borderBottom: 'none',
+                    alignContent: 'center',
+                },
+                '& .name-column--cell': {
+                    color: colors.greenAccent[300],
+                },
+                '& .MuiDataGrid-columnHeader': {
+                    backgroundColor: colors.greenAccent[700],
+                    borderBottom: 'none',
+                },
+                '& .MuiDataGrid-virtualScroller': {
+                    backgroundColor: colors.primary[400],
+                },
+                '& .MuiDataGrid-footerContainer': {
+                    backgroundColor: colors.greenAccent[700],
+                    borderTop: 'none',
+                }
+            }}>
                 <DataGrid
                     rows={teamData}
                     columns={columns}
