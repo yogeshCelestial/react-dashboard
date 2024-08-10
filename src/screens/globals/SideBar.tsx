@@ -14,6 +14,7 @@ import ReceiptOutlinedIcon from '@mui/icons-material/Receipt';
 import TimelineOutlinedIcon from '@mui/icons-material/Timeline';
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
+import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import userPicture from '../../assets/user.svg';
 
 import { tokens } from '../../theme';
@@ -135,6 +136,13 @@ function SideBar() {
                             title='Team'
                             to='/team'
                             icon={<PeopleOutlinedIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                        <Item
+                            title='Contacts Information'
+                            to='/contacts'
+                            icon={<ContactsOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />

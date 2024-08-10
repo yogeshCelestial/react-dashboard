@@ -1,6 +1,7 @@
 import { tokens } from '../theme';
+import { ContactsType, TeamType } from '../types/mockData';
 
-export const mockDataTeam = [
+export const mockDataTeam: TeamType[] = [
     {
         id: 1,
         name: 'Jon Snow',
@@ -75,7 +76,7 @@ export const mockDataTeam = [
     },
 ];
 
-export const mockDataContacts = [
+export const mockDataContacts: ContactsType[] = [
     {
         id: 1,
         name: 'Jon Snow',

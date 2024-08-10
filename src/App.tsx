@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Dashboard from './screens/dashboard';
 import SideBar from './screens/globals/SideBar';
 import Team from './screens/team';
+import Contacts from './screens/contacts';
 
 function App() {
     const {theme, colorMode} = useMode();
@@ -21,7 +22,7 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Dashboard />} />
                             <Route path='/team' element={<Team />} />
-                            {/* <Route path='/contacts' element={<Dashboard />} /> */}
+                            <Route path='/contacts' element={<Contacts />} />
                             {/* <Route path='/invoices' element={<Dashboard />} /> */}
                             {/* <Route path='/calender' element={<Dashboard />} /> */}
                             {/* <Route path='/faq' element={<Dashboard />} />                                                      */}

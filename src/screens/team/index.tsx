@@ -55,14 +55,14 @@ const Team = () => {
                     color: colors.greenAccent[300],
                 },
                 '& .MuiDataGrid-columnHeader': {
-                    backgroundColor: colors.greenAccent[700],
+                    backgroundColor: theme.palette.mode === 'dark' ? colors.greenAccent[700] : colors.grey[700],
                     borderBottom: 'none',
                 },
                 '& .MuiDataGrid-virtualScroller': {
-                    backgroundColor: colors.primary[400],
+                    backgroundColor: theme.palette.mode === 'dark' ? colors.primary[400] : colors.grey[900],
                 },
                 '& .MuiDataGrid-footerContainer': {
-                    backgroundColor: colors.greenAccent[700],
+                    backgroundColor: theme.palette.mode === 'dark' ? colors.greenAccent[700] : colors.grey[700],
                     borderTop: 'none',
                 }
             }}>
