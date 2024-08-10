@@ -19,3 +19,12 @@ export type ContactsType = {
     zipCode: string,
     registrarId: number,
 }
+
+export type InvoicesType =  {
+    id: number,
+    name: string,
+    email: string,
+    cost: string,
+    phone: string,
+    date: string,
+}
