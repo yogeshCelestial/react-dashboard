@@ -13,6 +13,7 @@ import FAQPage from './screens/faq';
 import Bar from './screens/bar';
 import Pie from './screens/pie';
 import Line from './screens/line';
+import Geo from './screens/geo';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
                             <Route path='/pie-chart' element={<Pie />} />
                             <Route path='/line-chart' element={<Line />} />
                             <Route path='/bar-chart' element={<Bar />} /> 
-                            {/* <Route path='/geo' element={<Dashboard />} />                                                      */}
+                            <Route path='/geography' element={<Geo />} />                                                     
                         </Routes>
                     </main>
                 </div>
