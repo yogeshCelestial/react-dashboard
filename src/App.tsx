@@ -8,6 +8,7 @@ import SideBar from './screens/globals/SideBar';
 import Team from './screens/team';
 import Contacts from './screens/contacts';
 import Invoices from './screens/invoices';
+import Calendar from './screens/calender';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
                             <Route path='/team' element={<Team />} />
                             <Route path='/contacts' element={<Contacts />} />
                             <Route path='/invoices' element={<Invoices />} />
-                            {/* <Route path='/calender' element={<Dashboard />} /> */}
+                            <Route path='/calender' element={<Calendar />} />
                             {/* <Route path='/faq' element={<Dashboard />} />                                                      */}
                             {/* <Route path='/pie' element={<Dashboard />} /> */}
                             {/* <Route path='/line' element={<Dashboard />} /> */}
