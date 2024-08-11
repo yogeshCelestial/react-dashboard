@@ -9,6 +9,7 @@ import Team from './screens/team';
 import Contacts from './screens/contacts';
 import Invoices from './screens/invoices';
 import Calendar from './screens/calender';
+import FAQPage from './screens/faq';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
                             <Route path='/contacts' element={<Contacts />} />
                             <Route path='/invoices' element={<Invoices />} />
                             <Route path='/calender' element={<Calendar />} />
-                            {/* <Route path='/faq' element={<Dashboard />} />                                                      */}
+                            <Route path='/faqs' element={<FAQPage />} />                                                     
                             {/* <Route path='/pie' element={<Dashboard />} /> */}
                             {/* <Route path='/line' element={<Dashboard />} /> */}
                             {/* <Route path='/bar' element={<Dashboard />} />  */}
