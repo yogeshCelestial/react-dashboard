@@ -12,6 +12,7 @@ import Calendar from './screens/calender';
 import FAQPage from './screens/faq';
 import Bar from './screens/bar';
 import Pie from './screens/pie';
+import Line from './screens/line';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
                             <Route path='/calender' element={<Calendar />} />
                             <Route path='/faqs' element={<FAQPage />} />                                                     
                             <Route path='/pie-chart' element={<Pie />} />
-                            {/* <Route path='/line' element={<Dashboard />} /> */}
+                            <Route path='/line-chart' element={<Line />} />
                             <Route path='/bar-chart' element={<Bar />} /> 
                             {/* <Route path='/geo' element={<Dashboard />} />                                                      */}
                         </Routes>
