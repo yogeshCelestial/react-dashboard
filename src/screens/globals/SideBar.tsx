@@ -1,8 +1,8 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { ProSidebar as ProSideBar, Menu, MenuItem } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Box, useTheme, Typography, IconButton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import LineAxisOutlinedIcon from '@mui/icons-material/LineAxisOutlined';
@@ -45,7 +45,30 @@ function SideBar() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [selected, setSelected] = useState('Dashboard');
+    const [selected, setSelected] = useState(''); 
+    const currentLocation = useLocation();
+
+    useEffect(() => {
+        const titleAndPaths = [
+            { title: 'Dashboard', to: '/dashboard' },
+            { title: 'Team', to: '/team' },
+            { title: 'Contacts Information', to: '/contacts' },
+            { title: 'Calender', to: '/calender' },
+            { title: 'Invoices', to: '/invoices' },
+            { title: 'FAQs', to: '/faqs' },
+            { title: 'Line Chart', to: '/line-chart' },
+            { title: 'Pie Chart', to: '/pie-chart' },
+            { title: 'Bar Chart', to: '/bar-chart' },
+            { title: 'Geography', to: '/geography' },
+        ];
+       
+        const existTitleAndPath = titleAndPaths.find((c) => c.to === currentLocation.pathname);
+        if (existTitleAndPath?.title) {
+            setSelected(existTitleAndPath.title);
+        } else {
+            setSelected('Dashboard');
+        }
+    }, [currentLocation.pathname]);
 
     return (
         <Box
