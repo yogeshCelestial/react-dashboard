@@ -70,6 +70,10 @@ function SideBar() {
         }
     }, [currentLocation.pathname]);
 
+    useEffect(() => {
+        document.title = `Admin | ${selected}`;
+    }, [selected]);
+
     return (
         <Box
             sx={{
