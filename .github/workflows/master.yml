@@ -12,6 +12,9 @@ on:
 permissions:
   contents: write
 
+env: 
+  CI: false  
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
