@@ -4,7 +4,7 @@ import { mockLineData as data } from '../data/mockData';
 import { useTheme } from '@mui/material';
 import { tokens } from '../theme';
 
-const LineChart = ({ isDashboard=false}) => {
+const LineChart = ({ isDashboard=false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     return (
@@ -75,6 +75,8 @@ const LineChart = ({ isDashboard=false}) => {
             pointLabel="data.yFormatted"
             pointLabelYOffset={-12}
             enableTouchCrosshair={true}
+            enableGridX={!isDashboard}
+            enableGridY={!isDashboard}
             useMesh={true}
             legends={isDashboard ? [] : [
                 {

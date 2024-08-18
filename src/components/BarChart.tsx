@@ -127,7 +127,7 @@ const BarChart = ({ isDashboard=false}) => {
                     ]
                 ]
             }}
-            legends={[
+            legends={isDashboard ? undefined : [
                 {
                     dataFrom: 'keys',
                     anchor: 'bottom-right',

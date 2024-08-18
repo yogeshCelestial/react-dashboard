@@ -103,7 +103,7 @@ const GeoChart = ({ isDashboard=false }) => {
                         {
                             on: 'hover',
                             style: {
-                                itemTextColor: '#000000',
+                                itemTextColor: '#ffffff',
                                 itemOpacity: 1
                             }
                         }
