@@ -12,6 +12,11 @@ body,
   font-family: 'Roboto', sans-serif;
 }
 
+.content {
+  height: 100vh;
+  overflow: auto;
+}
+
 .app {
   display: flex;
   position: relative;

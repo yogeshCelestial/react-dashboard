@@ -20,8 +20,8 @@ function Dashboard() {
                 <Header title='DASHBOARD' subtitle='Welcome to your dashboard' />
                 <Box>
                     <Button sx={{
-                        backgroundColor: colors.blueAccent[700],
-                        color: colors.grey[100],
+                        backgroundColor: theme.palette.mode === 'dark' ? colors.blueAccent[700] : colors.greenAccent[300],
+                        color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[900],
                         fontSize: '14px',
                         p: '10px 20px',
                         fontWeight: 'bold',
