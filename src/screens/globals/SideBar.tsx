@@ -50,7 +50,7 @@ function SideBar() {
 
     useEffect(() => {
         const titleAndPaths = [
-            { title: 'Dashboard', to: '/dashboard' },
+            { title: 'Dashboard', to: '/react-dashboard' },
             { title: 'Team', to: '/team' },
             { title: 'Contacts Information', to: '/contacts' },
             { title: 'Calender', to: '/calender' },
@@ -151,7 +151,7 @@ function SideBar() {
                     <Box paddingLeft={isCollapsed ? undefined : '10%'}>
                         <Item
                             title='Dashboard'
-                            to='/'
+                            to='/react-dashboard'
                             icon={<HomeOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
